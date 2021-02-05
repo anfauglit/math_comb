@@ -1,0 +1,55 @@
+\documentclass[letterpaper, 10pt]{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{listings}
+
+\setlength{\parindent}{0pt}
+
+\newtheorem{thm}{Theorem}
+\numberwithin{thm}{section}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{col}[thm]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{mydef}[thm]{Definition}
+
+\begin{document}
+\setcounter{section}{6}
+\section{$r$-\uppercase{combinations}}
+An \textit{r-combination of an n-set} $C(n, r)$ is a selection of $r$ elements from the set. Order
+does not matter. $r$-combination is an $r$-element subset.
+\begin{thm}
+	\begin{equation*}
+		P(n,r) = C(n,r) \times P(r,r)
+	\end{equation*}
+\end{thm}
+
+\begin{col}
+	\begin{equation}
+		C(n,r) = \frac{n!}{r!\,(n-r)!}
+	\end{equation}
+\end{col}
+
+\begin{col}
+	\begin{equation*}
+		C(n,r)=C(n,n-r)
+	\end{equation*}
+\end{col}
+
+\emph{Binomial coefficient}
+\begin{equation*}
+	\binom{n}{r} = \frac{n!}{r!\,(n-r)!}
+\end{equation*}
+
+\begin{equation*}
+	\binom{n}{r} = \binom{n}{n-r} 
+\end{equation*}
+
+\begin{thm}
+	\begin{equation*}
+		C(n,r)=C(n-1,r-1) + C(n-1,r)
+	\end{equation*}
+\end{thm}
+
+\end{document}
